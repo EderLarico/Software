@@ -1,7 +1,5 @@
 <?php
 $url = parse_url(getenv("MONGODB_URI"));
-var_dump($url);
-
 $host = $url["host"]??null;
 $port = $url["port"]??null;
 $username = $url["user"]??null;
