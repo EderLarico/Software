@@ -81,7 +81,7 @@ class CarController extends Controller
         $car->model = $request->get('model');
         $car->price = $request->get('price');        
         $car->save();
-        return redirect('/test')->with('success', 'Car has been successfully update');
+        return redirect('/test')->with('success', 'Car has been successfully updated');
     }
 
     /**
