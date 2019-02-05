@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c458135b5c46f8729f805d4bc28970ab",
+    "content-hash": "b7b1fc816d2f5ecbf90cae081b9e0f6a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -636,6 +636,75 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jenssegers/mongodb",
+            "version": "v3.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/laravel-mongodb.git",
+                "reference": "9df6d1ef542463aef676013b60152e812e805f77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/9df6d1ef542463aef676013b60152e812e805f77",
+                "reference": "9df6d1ef542463aef676013b60152e812e805f77",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "^5.6",
+                "illuminate/database": "^5.6",
+                "illuminate/events": "^5.6",
+                "illuminate/support": "^5.6",
+                "mongodb/mongodb": "^1.0.0"
+            },
+            "require-dev": {
+                "doctrine/dbal": "^2.5",
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^3.1",
+                "phpunit/phpunit": "^6.0|^7.0",
+                "satooshi/php-coveralls": "^2.0"
+            },
+            "suggest": {
+                "jenssegers/mongodb-sentry": "Add Sentry support to Laravel-MongoDB",
+                "jenssegers/mongodb-session": "Add MongoDB session support to Laravel-MongoDB"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Jenssegers\\Mongodb\\MongodbServiceProvider",
+                        "Jenssegers\\Mongodb\\MongodbQueueServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Jenssegers\\Mongodb": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "A MongoDB based Eloquent model and Query builder for Laravel (Moloquent)",
+            "homepage": "https://github.com/jenssegers/laravel-mongodb",
+            "keywords": [
+                "database",
+                "eloquent",
+                "laravel",
+                "model",
+                "moloquent",
+                "mongo",
+                "mongodb"
+            ],
+            "time": "2018-11-29T12:08:20+00:00"
         },
         {
             "name": "laravel/framework",

@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('test', 'CarController');
+
 Route::get('mongo', function(Request $request) {
     $collection = Mongo::get()->controles->test;
     return $collection->find()->toArray();
