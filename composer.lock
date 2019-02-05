@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7b1fc816d2f5ecbf90cae081b9e0f6a",
+    "content-hash": "f22dd4e3e552103cf255aedece29f123",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -639,16 +639,16 @@
         },
         {
             "name": "jenssegers/mongodb",
-            "version": "v3.4.5",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jenssegers/laravel-mongodb.git",
-                "reference": "9df6d1ef542463aef676013b60152e812e805f77"
+                "reference": "32974fdaf5eefb76f3968a7a6c2078d06c0484ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/9df6d1ef542463aef676013b60152e812e805f77",
-                "reference": "9df6d1ef542463aef676013b60152e812e805f77",
+                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/32974fdaf5eefb76f3968a7a6c2078d06c0484ac",
+                "reference": "32974fdaf5eefb76f3968a7a6c2078d06c0484ac",
                 "shasum": ""
             },
             "require": {
@@ -704,20 +704,20 @@
                 "mongo",
                 "mongodb"
             ],
-            "time": "2018-11-29T12:08:20+00:00"
+            "time": "2018-02-25T18:52:04+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.7.24",
+            "version": "v5.7.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2ede55db4b8201ed0450fa7e7a4d7220aa29bc34"
+                "reference": "f8fb354878064b94a3ff09a6ffd48ee9a8d712cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2ede55db4b8201ed0450fa7e7a4d7220aa29bc34",
-                "reference": "2ede55db4b8201ed0450fa7e7a4d7220aa29bc34",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f8fb354878064b94a3ff09a6ffd48ee9a8d712cf",
+                "reference": "f8fb354878064b94a3ff09a6ffd48ee9a8d712cf",
                 "shasum": ""
             },
             "require": {
@@ -850,7 +850,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-01-29T22:13:46+00:00"
+            "time": "2019-02-05T14:28:43+00:00"
         },
         {
             "name": "laravel/nexmo-notification-channel",
