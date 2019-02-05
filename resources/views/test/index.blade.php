@@ -13,6 +13,7 @@
         <p>{{ \Session::get('success') }}</p>
       </div><br />
      @endif
+     <a href="test/create" class="btn btn-success">Agregar</a>
     <table class="table table-striped">
     <thead>
       <tr>
