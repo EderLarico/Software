@@ -97,7 +97,7 @@ return [
             'database' => env('MONGO_DB_DATABASE',$database),
             'username' => env('MONGO_DB_USERNAME',$username),
             'password' => env('MONGO_DB_PASSWORD',$password),
-            'options'  => []
+            'options'  => ['database' =>  env('MONGO_DB_DATABASE')]
         ],
     ],
 
