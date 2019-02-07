@@ -17,18 +17,18 @@
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
 
 		<!-- Vendor CSS -->
-		<link rel="stylesheet" href={{URL::asset("assets/vendor/bootstrap/css/bootstrap.css")}} />
-		<link rel="stylesheet" href={{URL::secure_asset("assets/vendor/bootstrap/css/bootstrap.css")}} />
-		<link rel="stylesheet" href={{URL::asset("assets/vendor/font-awesome/css/font-awesome.css")}} />
-		<link rel="stylesheet" href={{URL::secure_asset("assets/vendor/font-awesome/css/font-awesome.css")}} />
+		<link rel="stylesheet" href={{asset("assets/vendor/bootstrap/css/bootstrap.css")}} />
+		<link rel="stylesheet" href={{secure_asset("assets/vendor/bootstrap/css/bootstrap.css")}} />
+		<link rel="stylesheet" href={{asset("assets/vendor/font-awesome/css/font-awesome.css")}} />
+		<link rel="stylesheet" href={{secure_asset("assets/vendor/font-awesome/css/font-awesome.css")}} />
 
 		<!-- Theme CSS -->
-		<link rel="stylesheet" href={{URL::asset("assets/stylesheets/theme.css")}} />
-		<link rel="stylesheet" href={{URL::secure_asset("assets/stylesheets/theme.css")}} />
+		<link rel="stylesheet" href={{asset("assets/stylesheets/theme.css")}} />
+		<link rel="stylesheet" href={{secure_asset("assets/stylesheets/theme.css")}} />
 
 		<!-- Head Libs -->
-		<script src={{URL::asset("assets/vendor/modernizr/modernizr.js")}}></script>
-		<script src={{URL::secure_asset("assets/vendor/modernizr/modernizr.js")}}></script>
+		<script src={{asset("assets/vendor/modernizr/modernizr.js")}}></script>
+		<script src={{secure_asset("assets/vendor/modernizr/modernizr.js")}}></script>
         
         @yield('estilos')
 	</head>
@@ -638,22 +638,22 @@
 		</section>
 		
 		<!-- Vendor -->
-		<script src={{URL::asset("assets/vendor/jquery/jquery.js")}}></script>
-		<script src={{URL::secure_asset("assets/vendor/jquery/jquery.js")}}></script>
-		<script src={{URL::asset("assets/vendor/bootstrap/js/bootstrap.js")}}></script>
-		<script src={{URL::secure_asset("assets/vendor/bootstrap/js/bootstrap.js")}}></script>
-		<script src={{URL::asset("assets/vendor/nanoscroller/nanoscroller.js")}}></script>
-		<script src={{URL::secure_asset("assets/vendor/nanoscroller/nanoscroller.js")}}></script>
+		<script src={{asset("assets/vendor/jquery/jquery.js")}}></script>
+		<script src={{secure_asset("assets/vendor/jquery/jquery.js")}}></script>
+		<script src={{asset("assets/vendor/bootstrap/js/bootstrap.js")}}></script>
+		<script src={{secure_asset("assets/vendor/bootstrap/js/bootstrap.js")}}></script>
+		<script src={{asset("assets/vendor/nanoscroller/nanoscroller.js")}}></script>
+		<script src={{secure_asset("assets/vendor/nanoscroller/nanoscroller.js")}}></script>
 		
 		
 		<!-- Theme Base, Components and Settings -->
-		<script src={{URL::asset("assets/javascripts/theme.js")}}></script>
-		<script src={{URL::secure_asset("assets/javascripts/theme.js")}}></script>
+		<script src={{asset("assets/javascripts/theme.js")}}></script>
+		<script src={{secure_asset("assets/javascripts/theme.js")}}></script>
 		
 
 		<!-- Examples -->
-		<script src={{URL::asset("assets/javascripts/dashboard/examples.dashboard.js")}}></script>
-		<script src={{URL::secure_asset("assets/javascripts/dashboard/examples.dashboard.js")}}></script>
+		<script src={{asset("assets/javascripts/dashboard/examples.dashboard.js")}}></script>
+		<script src={{secure_asset("assets/javascripts/dashboard/examples.dashboard.js")}}></script>
 
         @yield('js')
         @yield('jsope')
