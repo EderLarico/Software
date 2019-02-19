@@ -5,95 +5,149 @@
 
 
 @section('content')
-    <header class="panel-heading">
-        <h2 class="panel-title">9.1.1 Política de control de accesos</h2>
+<div class="box box-primary">
 
-        <p class="panel-subtitle">
-        Una poltica de control de acceso debe ser establecida, documentada y revisada, basada en requisitos del negocio y de seguridad de la informacion
+    <header class="panel-heading">
+        <h2 class="all-tittles">Modificación de entrada</h2>
+
+        <p class="panel-subtittlese"><font size="4">
+        Se registrará cada modificación que se realize
+        </font>
         </p>
     </header>
     <form action="/control1/{{$id}}" method="post">
         {{ csrf_field() }}
         {{ method_field('PUT') }}
         <div class="panel-body">
-            <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group">
-                        <label class="control-label">Jefe de Informatica</label>
-                        <input type="text" name="jefeInformatica" class="form-control" value="{{$control->jefeInformatica}}">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label class="control-label">Comite responsable</label>
-                        <input type="text" name="comiteResponsable" class="form-control"  value="{{$control->comiteResponsable}}">
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label class="control-label">Cargo</label>
-                        <input type="text" name="cargo" class="form-control"  value="{{$control->cargo}}">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label class="control-label">Sede de Organizacion</label>
-                        <input type="text" name="sedeOrganizacion" class="form-control"  value="{{$control->sedeOrganizacion}}">
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label class="control-label">Area</label>
-                        <input type="text" name="area" class="form-control"  value="{{$control->area}}">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label class="control-label">Responsable del area</label>
-                        <input type="text" name="responsableArea" class="form-control"  value="{{$control->responsableArea}}">
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label class="control-label">Sistema</label>
-                        <input type="text" name="sistema" class="form-control"  value="{{$control->sistema}}">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label class="control-label">Politicas de acceso</label>
-                        <input type="text" name="politicasAcceso" class="form-control"  value="{{$control->politicasAcceso}}">
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label class="control-label">Usuarios</label>
-                        <input type="text" name="usuarios" class="form-control"  value="{{$control->usuarios}}">
+                        <label class="control-label"><font size="4">Título</font></label>
+                        <input type="text" name="titulo" class="form-control" value="{{$control->titulo}}">
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <label class="control-label">Perfil</label>
-                        <input type="text" name="perfil" class="form-control"  value="{{$control->perfil}}">
+                        <label class="control-label"><font size="4">Año</font></label>
+                        <input type="Date" name="anio" class="form-control"  value="{{$control->anio}}">
                     </div>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-3">
                     <div class="form-group">
-                        <label class="control-label">Apellidos y Nombres</label>
-                        <input type="text" name="apellidosNombres" class="form-control"  value="{{$control->apellidosNombres}}">
+                        <label class="control-label"><font size="4">Estado</font></label>
+                        <select class="form-control selectpicker" id="producto" data-live-search="true" name="estado" value="{{$control->estado}}">
+                            <option value="Disponible"> Disponible </option>
+                            <option value="No disponible"> No disponible </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label"><font size="4">Asesor</font></label>
+                        <input type="text" name="asesor" class="form-control"  value="{{$control->asesor}}">
+                    </div>
+                </div>
+
+            @php
+            $cont=0;
+            @endphp
+            @while($cont < sizeof($control->autor))
+            @if($cont==0)
+            <div class="input-group control-group after-add-more-subarea col-sm-12" >
+                <div class="box box-success">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label"><font size="4">Autor</font></label>
+                                    <input type="text" name="autor[]" class="form-control" value="{{$control->autor[$cont]}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-xs-2 slct" >
+                    <button class="btn btn-success add-more-subarea" type="button"><i class="glyphicon glyphicon-plus"></i> Agregar</button>
+                </div>
+            </div>
+            @else
+            <!--lo que copia varias veces-->
+            <div class="control-group-subarea input-group col-sm-12" style="margin-top:5px">
+                <div class="box box-success">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label"><font size="4">Autor</font></label>
+                                    <input type="text" name="autor[]" class="form-control"  value="{{$control->autor[$cont]}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-xs-2 slct" >
+                    <button class="btn btn-danger remove-subarea" type="button"><i class="glyphicon glyphicon-remove-subarea"></i> Eliminar Campo</button>
                     </div>
                 </div>
             </div>
+            
+            @endif
+            @php
+            $cont=$cont+1;
+            @endphp
+            @endwhile
+            <div class="debajo"></div>
         </div>
+
         <footer class="panel-footer">
             <input type="submit" class="btn btn-success" value="Actualizar">
         </footer>
     </form>
-    
+
+    <!--lo que copia varias veces-->
+    <div class="copy-subarea hide">
+        <div class="control-group-subarea input-group col-sm-12" style="margin-top:5px">
+            <div class="box box-success">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label"><font size="4">Autor</font></label>
+                                <input type="text" name="autor[]" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-xs-2 slct" >
+            <button class="btn btn-danger remove-subarea" type="button"><i class="glyphicon glyphicon-remove-subarea"></i> Eliminar Campo</button>
+            </div>
+        </div>
+    </div>
+    <input hidden id="contador"  value="{{count($control->autor)}}">
+
+</div> 
+@stop
+
+@section('jsope')
+<script type="text/javascript">
+  $(document).ready(function() {
+    contador = $("#contador").val();
+    $(".add-more-subarea").click(function(){
+        if (contador < 3){
+            contador++;
+            var html = $(".copy-subarea").html();
+            $(".debajo").after(html);
+        }
+        else {
+            alert("Sólo se puede ingresar máximo 3 autores" + contador);
+        }
+    });
+    $("body").on("click",".remove-subarea",function(){
+        contador--;
+        $(this).parents(".control-group-subarea").remove();
+    });
+  });
+</script>
 @stop

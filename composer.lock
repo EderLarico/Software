@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f22dd4e3e552103cf255aedece29f123",
+    "content-hash": "b9bc64e542e1d42197f5db7b56168fde",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -639,16 +639,16 @@
         },
         {
             "name": "jenssegers/mongodb",
-            "version": "v3.4.0",
+            "version": "v3.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jenssegers/laravel-mongodb.git",
-                "reference": "32974fdaf5eefb76f3968a7a6c2078d06c0484ac"
+                "reference": "9df6d1ef542463aef676013b60152e812e805f77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/32974fdaf5eefb76f3968a7a6c2078d06c0484ac",
-                "reference": "32974fdaf5eefb76f3968a7a6c2078d06c0484ac",
+                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/9df6d1ef542463aef676013b60152e812e805f77",
+                "reference": "9df6d1ef542463aef676013b60152e812e805f77",
                 "shasum": ""
             },
             "require": {
@@ -704,7 +704,7 @@
                 "mongo",
                 "mongodb"
             ],
-            "time": "2018-02-25T18:52:04+00:00"
+            "time": "2018-11-29T12:08:20+00:00"
         },
         {
             "name": "laravel/framework",
@@ -2742,7 +2742,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",

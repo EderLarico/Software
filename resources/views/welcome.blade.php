@@ -22,6 +22,18 @@
 		<link rel="stylesheet" href={{asset("assets/vendor/font-awesome/css/font-awesome.css")}} />
 		<link rel="stylesheet" href={{secure_asset("assets/vendor/font-awesome/css/font-awesome.css")}} />
 
+		<link rel="stylesheet" href={{asset("css/sweet-alert.css")}} />
+	    <link rel="stylesheet" href={{asset("css/material-design-iconic-font.min.css")}} />
+	    <link rel="stylesheet" href={{asset("css/normalize.css")}} />
+	    <link rel="stylesheet" href={{asset("css/bootstrap.min.css")}} />
+	    <link rel="stylesheet" href={{asset("css/style.css")}} />
+
+		<link rel="stylesheet" href={{secure_asset("css/sweet-alert.css")}} />
+	    <link rel="stylesheet" href={{secure_asset("css/material-design-iconic-font.min.css")}} />
+	    <link rel="stylesheet" href={{secure_asset("css/normalize.css")}} />
+	    <link rel="stylesheet" href={{secure_asset("css/bootstrap.min.css")}} />
+	    <link rel="stylesheet" href={{secure_asset("css/style.css")}} />
+
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href={{asset("assets/stylesheets/theme.css")}} />
 		<link rel="stylesheet" href={{secure_asset("assets/stylesheets/theme.css")}} />
@@ -32,32 +44,36 @@
         
         @yield('estilos')
 	</head>
-	<body>
-		<section class="body">
+	<body >
+		<section class="body" style="background: url('/assets/images/unsaac.jpg');">
 
 			<!-- start: header -->
-			<header class="header">
-				<div class="logo-container">
-					<a href="../" class="logo">
-						<img src="assets/images/logo.png" height="35" alt="JSOFT Admin" />
-					</a>
-					<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
-						<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+			<h1>
+				<header class="header" style="padding-left: 500px;" >
+					<div class="logo-container">
+
+						<div  >
+							<img src="{{URL::asset('/assets/images/logop.png')}}" height="58" >&nbsp;&nbsp;<b>BIBLIOTECA DE TESIS</b></img>
+						</div>
 					</div>
-				</div>
-			</header>
+				</header>
+			</h1>
 			<!-- end: header -->
 
 			<div class="inner-wrapper">
 				<!-- start: sidebar -->
-				<aside id="sidebar-left" class="sidebar-left">
+				<aside id="sidebar-left" class="sidebar-left" >
 				
-					<div class="sidebar-header">
-						<div class="sidebar-title">
-							Navigation
-						</div>
+					<div class="sidebar-header" style="background-color:#2B3D51; padding: 10px 0; color:#fff;">
+						
+						<b><p class="text"  ><span style="font-size: 12pt">
+							Administración de Tesis</span>
+						</p></b>
+
 						<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+
 							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+
 						</div>
 					</div>
 				
@@ -68,574 +84,95 @@
 									<li class="nav-parent">
 										<a>
 											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>5. Politicas de seguridad</span>
+											<span style="font-size: 12pt">Registro de usuarios</span>
+										</a>
+				                        <ul class="nav nav-children">
+				                            <li><a href="admin.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo administrador</a></li>
+				                            <li><a href="teacher.html"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo docente</a></li>
+				                            <li><a href="student.html"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo estudiante</a></li>
+				                            <li><a href="personal.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo personal administrativo</a></li>
+				                        </ul>
+									</li>
+									<li class="nav-parent">
+										<a>
+											<i class="fa fa-align-left" aria-hidden="true"></i>
+											<span style="font-size: 12pt">Tesis</span>
 										</a>
 										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>5.1 Directrices de la Dirección en seguridad de la información</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>5.1.1 Conjunto de políticas para la seguridad de la información.</a>
-													</li>
-													<li>
-														<a>5.1.2 Revisión de las políticas para la seguridad de la información.</a>
-													</li>
-												</ul>
-											</li>
+				                            <li><a href="/control1/create" ><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Registro de tesis</a></li>
+				                            <li><a href="/control1"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Catálogo de tesis</a></li>
+				                        </ul>
+									</li>
+									<li class="nav-parent">
+										<a>
+											<i class="fa fa-align-left" aria-hidden="true"></i>
+											<span style="font-size: 12pt">Préstamos de tesis </span>
+										</a>
+										<ul class="nav nav-children">
+											<li><a href="loan.html"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i>&nbsp;&nbsp; Todos los préstamos</a></li>
+				                            <li>
+				                                <a href="loanpending.html"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i>&nbsp;&nbsp; Devoluciones pendientes <span class="label label-danger pull-right label-mhover">7</span></a>
+				                            </li>
 										</ul>
 									</li>
 									<li class="nav-parent">
 										<a>
 											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>6. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
+											<span style="font-size: 12pt">Reportes</span>
 										</a>
 										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
+											<li>
+												<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
 											</li>
-											<li class="nav-parent">
-													<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-													<ul class="nav nav-children">
-														<li>
-															<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-														</li>
-														<li>
-															<a>6.2.2 Teletrabajo</a>
-														</li>
-													</ul>
-												</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>7. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
+											<li>
+												<a>6.1.2 Segregación de tareas</a>
 											</li>
 										</ul>
 									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>8. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>9. CONTROL DE ACCESOS.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>9.1 Requisitos de negocio para el control de accesos</a>
-												<ul class="nav nav-children">
-													<li>
-														<a href="/control1">9.1.1 Política de control de accesos</a>
-													</li>
-													<li>
-														<a href="/control2">9.1.2 Control de acceso a las redes y servicios asociados</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>9.2 Gestión de acceso de usuario.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>9.2.1 Gestión de altas/bajas en el registro de usuarios.</a>
-													</li>
-													<li>
-														<a>9.2.2 Gestión de los derechos de acceso asignados a usuarios</a>
-													</li>
-													<li>
-														<a>9.2.3 Gestión de los derechos de acceso con privilegios especiales</a>
-													</li>
-													<li>
-														<a>9.2.4 Gestión de información confidencial de autenticación de usuarios. </a>
-													</li>
-													<li>
-														<a>9.2.5 Revisión de los derechos de acceso de los usuarios</a>
-													</li>
-													<li>
-														<a>9.2.6 Retirada o adaptación de los derechos de acceso</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>9.3 Responsabilidades del usuario.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>9.3.1 Uso de información confidencial para la autenticación.</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>9.4 Control de acceso a sistemas y aplicaciones.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>9.4.1 Restricción del acceso a la información</a>
-													</li>
-													<li>
-														<a>9.4.2 Procedimientos seguros de inicio de sesión</a>
-													</li>
-													<li>
-														<a>9.4.3 Gestión de contraseñas de usuarin</a>
-													</li>
-													<li>
-														<a>9.4.4 Uso de herramientas de administración de sistemas</a>
-													</li>
-													<li>
-														<a>9.4.5 Control de acceso al código fuente de los programas</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>10. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>11. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>12. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>13. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>14. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>15. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>16. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>17. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-parent">
-										<a>
-											<i class="fa fa-align-left" aria-hidden="true"></i>
-											<span>18. ASPECTOS ORGANIZATIVOS DE LA SEGURIDAD DE LA INFORMAC.</span>
-										</a>
-										<ul class="nav nav-children">
-											<li class="nav-parent">
-												<a>6.1 Organización interna</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.1.1 Asignación de responsabilidades para la segur. de la información</a>
-													</li>
-													<li>
-														<a>6.1.2 Segregación de tareas</a>
-													</li>
-													<li>
-														<a>6.1.3 Contacto con las autoridades</a>
-													</li>
-													<li>
-														<a>6.1.4 Contacto con grupos de interés especial</a>
-													</li>
-													<li>
-														<a>6.1.5 Seguridad de la información en la gestión de proyectos</a>
-													</li>
-												</ul>
-											</li>
-											<li class="nav-parent">
-												<a>6.2 Dispositivos para movilidad y teletrabajo.</a>
-												<ul class="nav nav-children">
-													<li>
-														<a>6.2.1 Política de uso de dispositivos para movilidad</a>
-													</li>
-													<li>
-														<a>6.2.2 Teletrabajo</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
+									
 								</ul>
 							</nav>
 						</div>
+
+
 					</div>
+
+
 				
 				</aside>
 				<!-- end: sidebar -->
 
-				<section role="main" class="content-body">
-                    @yield('content')
+				<section role="main" class="content-body"  >
+			        @yield('content')
+				    <footer class="footer full-reset">
+			            <div class="container-fluid">
+			                <div class="row">
+			                    <div class="col-xs-12 col-sm-6">
+			                        <h4 class="all-tittles">Acerca de</h4>
+			                        <p>
+			                            Información de la institución
+			                        </p>
+			                    </div>
+			                    <div class="col-xs-12 col-sm-6">
+			                        <h4 class="all-tittles">Curso</h4>
+			                        <ul class="list-unstyled">
+			                            <li><i class="zmdi zmdi-check zmdi-hc-fw"></i>&nbsp; Ingeniería de Software <i class="zmdi zmdi-facebook zmdi-hc-fw footer-social"></i><i class="zmdi zmdi-twitter zmdi-hc-fw footer-social"></i></li>
+			                        </ul>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="footer-copyright full-reset all-tittles">Cusco-Perú 2019</div>
+			        </footer>
+                    
 				</section>
 			</div>
 
 		</section>
+
+
+
+
+    
 		
 		<!-- Vendor -->
 		<script src={{asset("assets/vendor/jquery/jquery.js")}}></script>

@@ -37,17 +37,11 @@ class Control1Controller extends Controller
     public function store(Request $request)
     {
         $control = new Control1();
-        $control->jefeInformatica = $request->get('jefeInformatica');
-        $control->comiteResponsable =$request->get('comiteResponsable');
-        $control->cargo = $request->get('cargo');
-        $control->sedeOrganizacion =$request->get('sedeOrganizacion');
-        $control->area= $request->get('area');
-        $control->responsableArea =$request->get('responsableArea');
-        $control->sistema =$request->get('sistema');
-        $control->politicasAcceso =$request->get('politicasAcceso');
-        $control->usuarios =$request->get('usuarios');
-        $control->perfil= $request->get('perfil');
-        $control->apellidosNombres =$request->get('apellidosNombres');
+        $control->titulo = $request->get('titulo');
+        $control->anio =$request->get('anio');
+        $control->estado =$request->get('estado');
+        $control->asesor =$request->get('asesor');
+        $control->autor= $request->get('autor');
         $control->save();
 
         return redirect('/control1')->with('success', 'Control Agregado satisfactoriamente');
@@ -61,7 +55,8 @@ class Control1Controller extends Controller
      */
     public function show($id)
     {
-        //
+        $control = Control1::find($id);
+        return view('control1.show',compact('control','id'));
     }
 
     /**
@@ -85,18 +80,12 @@ class Control1Controller extends Controller
      */
     public function update(Request $request, $id)
     {
-        $control = Control1::find($id);;
-        $control->jefeInformatica = $request->get('jefeInformatica');
-        $control->comiteResponsable =$request->get('comiteResponsable');
-        $control->cargo = $request->get('cargo');
-        $control->sedeOrganizacion =$request->get('sedeOrganizacion');
-        $control->area= $request->get('area');
-        $control->responsableArea =$request->get('responsableArea');
-        $control->sistema =$request->get('sistema');
-        $control->politicasAcceso =$request->get('politicasAcceso');
-        $control->usuarios =$request->get('usuarios');
-        $control->perfil= $request->get('perfil');
-        $control->apellidosNombres =$request->get('apellidosNombres');
+        $control = Control1::find($id);
+        $control->titulo = $request->get('titulo');
+        $control->anio =$request->get('anio');
+        $control->estado =$request->get('estado');
+        $control->asesor =$request->get('asesor');
+        $control->autor= $request->get('autor');
         $control->save();
 
         return redirect('/control1')->with('success', 'Control Actualizado satisfactoriamente');

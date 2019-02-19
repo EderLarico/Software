@@ -7,11 +7,11 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
 class Control1 extends Eloquent
 {
-    protected $connection = 'mongodb';
-    protected $collection = 'controles';
-    
+	protected $connection = 'mongodb';
+    protected $collection = 'biblioteca';
+
     protected $fillable = [
-        'jefeInformatica', 'comiteResponsable','cargo','sedeOrganizacion','area',
-        'responsableArea','sistema','politicasAcceso','usuarios','perfil','apellidosNombres'
+    	'titulo','anio','estado','asesor',
+    	'autor'
     ];
 }

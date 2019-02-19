@@ -92,7 +92,7 @@ return [
             'driver'   => 'mongodb',
             'host'     => env('MONGO_DB_HOST', $host),
             'port'     => env('MONGO_DB_PORT', $port),
-            'database' => env('MONGO_DB_DATABASE',$database),
+            'database' => 'tesis',
             'username' => env('MONGO_DB_USERNAME',$username),
             'password' => env('MONGO_DB_PASSWORD',$password),
             'options'  => ['database' =>  env('MONGO_DB_DATABASE',$database)]
