@@ -90,11 +90,11 @@ return [
 
         'mongodb' => [
             'driver'   => 'mongodb',
-            'host'     => env('MONGO_DB_HOST', $host),
+            'dsn'     => 'mongodb://admin:<wQxFOqDcxdeSeUmb>@SG-tesis-18658.servers.mongodirector.com:27017/admin',
             'port'     => env('MONGO_DB_PORT', $port),
             'database' => 'tesis',
-            'username' => env('MONGO_DB_USERNAME',$username),
-            'password' => env('MONGO_DB_PASSWORD',$password),
+            'username' => 'admin',
+            'password' => 'wQxFOqDcxdeSeUmb',
             'options'  => ['database' =>  env('MONGO_DB_DATABASE',$database)]
         ],
     ],
